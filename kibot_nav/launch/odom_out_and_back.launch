@@ -1,0 +1,11 @@
+<launch>
+        <!--  smooths inputs from cmd_vel_mux/input/teleop_raw to cmd_vel_mux/input/teleop -->
+        <include file="$(find turtlebot_teleop)/launch/includes/velocity_smoother.launch.xml"/>
+
+        <node pkg="kibot_nav" type="odom_out_and_back.py" name="odom_out_and_back" output="screen">
+                <!--<remap from="odom_out_and_back/cmd_vel" to="teleop_velocity_smoother/raw_cmd_vel"/>-->
+                <remap from="odom_out_and_back/cmd_vel" to="cmd_vel_mux/input/teleop"/>                                                 
+                <!--<remap from="cmd_vel" to="cmd_vel_mux/input/teleop"/>-->
+        </node>
+
+</launch>

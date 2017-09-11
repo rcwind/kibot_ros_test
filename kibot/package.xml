@@ -1,0 +1,23 @@
+<package>
+  <name>kibot</name>
+  <version>0.4.0</version>
+  <description>for kibot test</description>
+  <maintainer email="251349552@qq.com">rcwind</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website"></url>
+
+  <url type="bugtracker"></url>
+
+  <author email="251349552@qq.com">rcwind</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>kibot_nav</run_depend>
+  <run_depend>kibot_bringup</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
